@@ -1,0 +1,17 @@
+<header class="header" id="header">
+  <nav class="nav container">
+    <a routerLink="/" class="nav__logo">
+      <span class="logo-mark">N</span>exaTech
+    </a>
+    <ul class="nav__menu" id="navMenu">
+      <li><a routerLink="/" class="nav__link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Inicio</a></li>
+      <li><a routerLink="/catalog" class="nav__link" routerLinkActive="active">Servicios</a></li>
+      <li><a href="/favoritos" class="nav__link">Favoritos <span class="fav-badge" id="favBadge">{{ favCount }} </span></a></li>
+      <li><a href="/admin" class="nav__link">Admin</a></li>
+      <li><a href="/contact" class="nav__link nav__link--cta">Contacto</a></li>
+    </ul>
+    <button class="nav__burger" id="navBurger" aria-label="Menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>

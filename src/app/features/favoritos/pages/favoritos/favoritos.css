@@ -1,0 +1,20 @@
+/* ── FAVORITOS ── */
+.favorites-empty {
+  text-align: center;
+  padding: 80px 24px;
+  color: var(--text-muted);
+}
+
+.favorites-empty .empty-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+  opacity: 0.4;
+}
+
+.favorites-empty h3 {
+  font-family: var(--font-head);
+  font-size: 1.4rem;
+  margin: 0 0 8px;
+  color: var(--text);
+}

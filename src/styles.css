@@ -1,0 +1,180 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+  --bg:        #080c14;
+  --bg-2:      #0d1320;
+  --bg-card:   #111827;
+  --border:    rgba(255,255,255,0.08);
+  --border-hi: rgba(96,165,250,0.35);
+  --text:      #e8edf5;
+  --text-muted:#8899b4;
+  --accent:    #3b82f6;
+  --accent-2:  #06b6d4;
+  --accent-3:  #a78bfa;
+  --danger:    #ef4444;
+  --success:   #22c55e;
+  --gold:      #f59e0b;
+  --font-head: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius:    12px;
+  --radius-lg: 20px;
+  --shadow:    0 4px 24px rgba(0,0,0,0.4);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.6);
+  --transition:0.25s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── BOTONES ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(59,130,246,0.35);
+}
+
+.btn--primary:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(59,130,246,0.45);
+}
+
+.btn--ghost {
+  background: rgba(255,255,255,0.06);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn--ghost:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: var(--border-hi);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid rgba(59,130,246,0.4);
+}
+
+.btn--outline:hover {
+  background: rgba(59,130,246,0.1);
+}
+
+.btn--danger {
+  background: rgba(239,68,68,0.15);
+  color: var(--danger);
+  border: 1px solid rgba(239,68,68,0.3);
+}
+
+.btn--danger:hover { background: rgba(239,68,68,0.25); }
+
+.btn--success {
+  background: var(--success);
+  color: #fff;
+}
+
+.btn--sm { padding: 8px 16px; font-size: 0.85rem; }
+.btn--lg { padding: 16px 32px; font-size: 1.05rem; }
+
+/* ── BUSCAR ── */
+.search-wrap {
+  max-width: 480px;
+  margin: 0 auto 32px;
+  position: relative;
+}
+
+.search-wrap input {
+  width: 100%;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  padding: 12px 48px 12px 20px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.search-wrap input:focus {
+  border-color: var(--accent);
+  background: rgba(59,130,246,0.06);
+}
+
+.search-icon {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.page-hero {
+  padding: 140px 0 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.page-hero__content { position: relative; z-index: 1; }
+
+.page-hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin: 0 0 12px;
+}
+
+.page-hero p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
